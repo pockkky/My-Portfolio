@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1a1a1a; /* Black */
+      color: #f0e6d2; /* Light Brown/Tan */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .sidebar {
+      background-color: #3b2f2f; /* Dark Brown */
+      min-height: 100vh;
+      width: 230px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .sidebar .top-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar .logo-pic {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid #f0e6d2;
+      margin-bottom: 10px;
+    }
+    /* 🔥 New profile image styling */
+    .sidebar .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #d4a373;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+    .sidebar h3 {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      color: #f0e6d2;
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    .nav-links a {
+      color: #f0e6d2;
+      text-decoration: none;
+      display: block;
+      padding: 15px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      background-color: rgb(83, 65, 65);
+      color: #3b2f2f;
+      border-radius: 10px;
+    }
+    .content {
+      margin-left: 240px;
+      padding: 40px;
+    }
+    .social-icons a {
+      color: #f0e6d2;
+      font-size: 1.5rem;
+      margin-right: 15px;
+    }
+    .social-icons a:hover {
+      color: #d4a373;
+    }
+    section {
+      display: none;
+      min-height: 100vh;
+    }
+    section.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    /* Home */
+    #home h2 {
+      font-size: 60px;
+      margin: 0 0 20px;
+      color: #f0e6d2;
+      letter-spacing: 8px;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding-bottom: 12px;
+      border-bottom: 4px solid #d4a373;
+      text-shadow: 2px 2px 5px #000;
+    }
+    #home p {
+      font-size: 50px;
+      color: #d4a373;
+      letter-spacing: 20%;
+      margin: 0;
+    }
+    /* Profile */
+    #profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #d4a373;
+      margin-bottom: 20px;
+    }
+    #profile h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #f0e6d2;
+    }
+    #profile p {
+      font-size: 18px;
+      color: #d4a373;
+      max-width: 600px;
+    }
+    #about p{
+    font-size: 18px;
+      color: #d4a373;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="top-section">
+      <!-- 🔥 Added Profile Picture -->
+
+ 
+      <img src="p3.jpg" alt="Logo" class="logo-pic">
+      <h3>My Portfolio</h3>
+    </div>
+
+    <div class="nav-links">
+      <a onclick="showSection('home')" class="active">Home</a>
+      <a onclick="showSection('profile')">Profile</a>
+      <a onclick="showSection('about')">About</a>
+      <a onclick="showSection('hobbies')">Hobbies</a>
+      <a onclick="showSection('contact')">Contact</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- Home Section -->
+    <section id="home" class="active">
+      <h2>H e l l o , &nbsp; I ' m <span style="color:#a37342;"> E d w a r d o </span></h2>
+      <p>Call me baby for short.</p>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <img src="p2.jpg" alt="My Profile Picture">
+      <h2>Edwardo Manglugay</h2>
+      <p>
+      A BSIT STUDENT THAT AT THE FIRST IMPRESSION IN IT IS JUST COPY AND PASTE ONLY
+      </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        What about me, I don't even know, but I am a jolly guy and sometimes an introvert, sometimes I just have mood swings where I want to be alone for no reason, but sometimes I always go to the gym alone and travel alone. I also enjoy watching sci-fi and horror movies.
+      </p>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <ul style="list-style: none; padding: 0; font-size: 20px;">
+        <li><i class="bi bi-code-slash" style="color:#d4a373; margin-right:10px;"></i> Coding & Web Design</li>
+        <li><i class="bi bi-music-note-beamed" style="color:#d4a373; margin-right:10px;"></i> Playing Guitar & Music</li>
+        <li><i class="bi bi-camera-fill" style="color:#d4a373; margin-right:10px;"></i> Travel & Photography</li>
+        <li><i class="bi bi-controller" style="color:#d4a373; margin-right:10px;"></i> Gaming & Exploring Tech</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="edwardomanglugay5@gmail.com" class="text-decoration-none text-light">edwardomanglugay5@gmail.com</a></p>
+      <p>Address: <a href="" class="text-decoration-none text-light">Ipet,Sudipen,La Union</a></p>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/direct/inbox/?__pwa=1" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://mail.google.com/mail/u/0/?hl=en"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.querySelectorAll(".nav-links a").forEach(link => link.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+</body>
+</html>
